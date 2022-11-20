@@ -1,16 +1,16 @@
-export function rottateMatch(src, target){
-    if (isRectangleEquals(src, target)) {
+export function rottateMatch(src, trg){
+    if (isRectangleEquals(src, trg)) {
         return true
     }
 
     let rottated = rottate(src)
-    if (isRectangleEquals(rottated, target)){
+    if (isRectangleEquals(rottated, trg)){
         return true
     }
 
     for (let i = 0; i < 2; i++){
         rottated = rottate(rottated)
-        if (isRectangleEquals(rottated, target)){
+        if (isRectangleEquals(rottated, trg)){
             return true
         }
     }
